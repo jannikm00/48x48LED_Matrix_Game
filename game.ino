@@ -184,6 +184,10 @@ void checkwin() {
     }
     led.show();
     game = 0;
+    n1 = 0;
+    n2 = 0;
+    n3 = 0;
+    n4 = 0;
   }
   if (score2 >= 5) {          //player2 win screen
     for (int i = 0; i < MAXLED; i++) {
@@ -191,6 +195,10 @@ void checkwin() {
     }
     led.show();
     game = 0;
+    n1 = 0;
+    n2 = 0;
+    n3 = 0;
+    n4 = 0;
   }
   if (score3 >= 5) {         //player3 win screen
     for (int i = 0; i < MAXLED; i++) {
@@ -198,6 +206,10 @@ void checkwin() {
     }
     led.show();
     game = 0;
+    n1 = 0;
+    n2 = 0;
+    n3 = 0;
+    n4 = 0;
   }
   if (score4 >= 5) {        //player4 win screen
     for (int i = 0; i < MAXLED; i++) {
@@ -205,6 +217,10 @@ void checkwin() {
     }
     led.show();
     game = 0;
+    n1 = 0;
+    n2 = 0;
+    n3 = 0;
+    n4 = 0;
   }
 }
 }
