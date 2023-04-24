@@ -85,85 +85,85 @@ void checkpos() {
   //PLAYER 1 Position
   if (analogRead(p1x) > 950)//player 1 up
   {
-    n1 + 48 = n1;
+    n1= n1 + 48 ;
   }
   if (analogRead(p1x) < 300)//player 1 down
-  { n1 - 48 = n1;
+  { n1= n1 - 48;
   }
   if (analogRead(p1y) > 950)//player 1 right
-  { n1 - 1 = n1;
+  { n1=n1 - 1;
   }
   if (analogRead(p1y) < 300)//player 1 left
-  { n1 + 1 = n1;
+  { n1= n1 + 1;
   }
 
   //PLAYER 2 Position
   if (analogRead(p2x) > 950)//player 2 up
   {
-    n2 + 48 = n2;
+    n2= n2 + 48;
   }
   if (analogRead(p2x) < 300)//player 2 down
-  { n2 - 48 = n2;
+  { n2= n2 - 48;
   }
   if (analogRead(p2y) > 950)//player 2 right
-  { n2 - 1 = n2;
+  { n2= n2 - 1;
   }
   if (analogRead(p2y) < 300)//player 2 left
-  { n2 + 1 = n2;
+  { n2= n2 + 1;
   }
 
   //PLAYER 3 Position
   if (analogRead(p3x) > 950)//player 3 up
   {
-    n3 + 48 = n3;
+    n3= n3 + 48;
   }
   if (analogRead(p3x) < 300)//player 3 down
-  { n3 - 48 = n3;
+  { n3= n3 - 48;
   }
   if (analogRead(p3y) > 950)//player 3 right
-  { n3 - 1 = n3;
+  { n3= n3 - 1;
   }
   if (analogRead(p3y) < 300)//player 3 left
-  { n3 + 1 = n3;
+  { n3= n3 + 1;
   }
 
   //PLAYER 4 Position
   if (analogRead(p4x) > 950)//player 4 up
   {
-    n4 + 48 = n4;
+    n4= n4 + 48;
   }
   if (analogRead(p4x) < 300)//player 4 down
-  { n4 - 48 = n4;
+  { n4= n4 - 48;
   }
   if (analogRead(p4y) > 950)//player 4 right
-  { n4 - 1 = n4;
+  { n4= n4 - 1;
   }
   if (analogRead(p4y) < 300)//player 4 left
-  { n4 + 1 = n4;
+  { n4= n4 + 1;
   }
 
 }
 void coin() {
   for (int i = 0; i < MAXLED; i++)  { //player 1 check coin
-    if (i + n1 == random) {
+    if ((i + n1) == random) {
       score1++;
       led.clear();
     }
   }
   for (int i = 0; i < MAXLED; i++)  { //player 2 check coin
-    if (i + n2 == random) {
+    if ((i + n2) == random) {
       score2++;
       led.clear();
     }
   }
   for (int i = 0; i < MAXLED; i++)  { //player 3 check coin
-    if (i + n3 == random) {
+    if ((i + n3) == random) {
       score3++;
       led.clear();
     }
   }
   for (int i = 0; i < MAXLED; i++)  { //player 4 check coin
-    if (i + n4 == random) {
+    if ((i + n4) == random) {
       score4++;
       led.clear();
     }
