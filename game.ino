@@ -25,8 +25,8 @@ void loop() {
 }
 
 void game4() {
+      int game = 1;
   if (select == 3) {
-    int game = 1;
     if (game == 1) {
       ledupdate();
       checkpos();
@@ -41,9 +41,9 @@ void ledupdate() {
   ledupdatep3();
   ledupdatep4();
 }
-void ledupdatep1()//player 1
+void ledupdatep1()           
 {
-  for (int i = 0; i < MAXLED; i++) {
+  for (int i = 0; i < MAXLED; i++) {//draw player 1
 
     if (i == 100 || i == 101) {
       led.setPixelColor(i + n1, led.Color(255, 0, 0));
@@ -51,9 +51,9 @@ void ledupdatep1()//player 1
     led.show();
   }
 }
-void ledupdatep2()//player 2
+void ledupdatep2() 
 {
-  for (int i = 0; i < MAXLED; i++) {
+  for (int i = 0; i < MAXLED; i++) {//draw player 2
 
     if (i == 100 || i == 101) {
       led.setPixelColor(i + n2, led.Color(0, 255, 0));
@@ -61,9 +61,9 @@ void ledupdatep2()//player 2
     led.show();
   }
 }
-void ledupdatep3()//player 3
+void ledupdatep3()
 {
-  for (int i = 0; i < MAXLED; i++) {
+  for (int i = 0; i < MAXLED; i++) {//draw player 3
 
     if (i == 100 || i == 101) {
       led.setPixelColor(i + n3, led.Color(0, 0, 255));
@@ -71,9 +71,9 @@ void ledupdatep3()//player 3
     led.show();
   }
 }
-void ledupdatep4()//player 4
+void ledupdatep4()
 {
-  for (int i = 0; i < MAXLED; i++) {
+  for (int i = 0; i < MAXLED; i++) {//draw player 4
 
     if (i == 100 || i == 101) {
       led.setPixelColor(i + n4, led.Color(255, 255, 255));
@@ -102,7 +102,7 @@ void checkpos() {
   {
     n2 + 48 = n2;
   }
-  if (analogRead(p2x) < 300)//player 2  down
+  if (analogRead(p2x) < 300)//player 2 down
   { n2 - 48 = n2;
   }
   if (analogRead(p2y) > 950)//player 2 right
@@ -117,7 +117,7 @@ void checkpos() {
   {
     n3 + 48 = n3;
   }
-  if (analogRead(p3x) < 300)//player 3  down
+  if (analogRead(p3x) < 300)//player 3 down
   { n3 - 48 = n3;
   }
   if (analogRead(p3y) > 950)//player 3 right
@@ -132,7 +132,7 @@ void checkpos() {
   {
     n4 + 48 = n4;
   }
-  if (analogRead(p4x) < 300)//player 4  down
+  if (analogRead(p4x) < 300)//player 4 down
   { n4 - 48 = n4;
   }
   if (analogRead(p4y) > 950)//player 4 right
@@ -170,7 +170,7 @@ void coin() {
   }
 
   countcoin + 0.1 = countcoin;
-  if (countcoin % 2 == 0) { //add coin
+  if (countcoin % 2 == 0) {   //add coin
     int random = 1 + (rand() % 2304);
     led.setPixelColor(random, led.Color(255, 255, 0));
   }
@@ -178,28 +178,28 @@ void coin() {
 }
 
 void checkwin() {
-  if (score1 >= 5) {//player1 win screen
+  if (score1 >= 5) {          //player1 win screen
     for (int i = 0; i < MAXLED; i++) {
       led.setPixelColor(i, led.Color(255, 0, 0));
     }
     led.show();
     game = 0;
   }
-  if (score2 >= 5) {//player2 win screen
+  if (score2 >= 5) {          //player2 win screen
     for (int i = 0; i < MAXLED; i++) {
       led.setPixelColor(i, led.Color(0, 255, 0));
     }
     led.show();
     game = 0;
   }
-  if (score3 >= 5) {//player3 win screen
+  if (score3 >= 5) {         //player3 win screen
     for (int i = 0; i < MAXLED; i++) {
       led.setPixelColor(i, led.Color(0, 0, 255));
     }
     led.show();
     game = 0;
   }
-  if (score4 >= 5) {//player4 win screen
+  if (score4 >= 5) {        //player4 win screen
     for (int i = 0; i < MAXLED; i++) {
       led.setPixelColor(i, led.Color(255, 255, 255));
     }
